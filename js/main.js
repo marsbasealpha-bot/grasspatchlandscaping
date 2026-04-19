@@ -166,22 +166,19 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
 
       // Submit via FormSubmit.co (free, no signup required)
-      // Change the email below to your real business email
-      fetch('https://formsubmit.co/ajax/info@grasspatchlandscaping.com', {
+      const submitBtn = contactForm.querySelector('.form-submit');
+      const originalBtnHTML = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span class="btn-spinner"></span> Sending...';
+      submitBtn.disabled = true;
+
+      // Use FormData directly for file upload support
+      fetch('https://formsubmit.co/ajax/marsbasealpha@gmail.com', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
           'Accept': 'application/json'
+          // Do not set Content-Type, browser will set it correctly for FormData
         },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          service: data.service || 'Not specified',
-          message: data.message,
-          _subject: 'New Quote Request — Grass Patch Landscaping',
-          _template: 'table'
-        })
+        body: formData
       })
       .then(response => response.json())
       .then(result => {

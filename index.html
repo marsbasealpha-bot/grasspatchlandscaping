@@ -22,13 +22,16 @@
        ============================================ -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#" class="nav-logo">
-        <img src="images/logo.jpg" alt="Grass Patch Landscaping Logo" id="navLogo">
-        <div class="nav-logo-text">
-          <span class="brand-name">Grass Patch</span>
-          <span class="brand-tagline">Landscaping</span>
+      <div class="nav-badge">
+        <div class="hero-badge header-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2L13.09 8.26L19 6L15.74 10.91L22 12L15.74 13.09L19 18L13.09 15.74L12 22L10.91 15.74L5 18L8.26 13.09L2 12L8.26 10.91L5 6L10.91 8.26L12 2Z"/></svg>
+          Serving Manatee & Sarasota Counties
         </div>
-      </a>
+        <a href="tel:9412331962" class="header-phone">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px;"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.58l2.2-2.21c.28-.27.36-.66.25-1.01C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+          (941) 233-1962
+        </a>
+      </div>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
@@ -55,9 +58,8 @@
     </div>
 
     <div class="hero-content">
-      <div class="hero-badge">
-        <svg viewBox="0 0 24 24"><path d="M12 2L13.09 8.26L19 6L15.74 10.91L22 12L15.74 13.09L19 18L13.09 15.74L12 22L10.91 15.74L5 18L8.26 13.09L2 12L8.26 10.91L5 6L10.91 8.26L12 2Z"/></svg>
-        Serving Manatee & Sarasota Counties
+      <div class="hero-brand-top">
+        <img src="images/logo.jpg" alt="Grass Patch Logo" class="hero-logo-main">
       </div>
 
       <h1><span class="hero-brand-name">Grass Patch</span> <span class="hero-brand-tagline">LANDSCAPING</span></h1>
@@ -157,8 +159,11 @@
 
         <!-- Edging -->
         <div class="service-card reveal">
-          <div class="service-card-body" style="padding: 2.5rem;">
-            <div class="service-card-icon" style="margin-top: 0;">🔪</div>
+          <div class="service-card-img">
+            <img src="images/edging.jpg" alt="Professional lawn edging service">
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon">🔪</div>
             <h3>Edging</h3>
             <p>
               Crisp, defined edges along driveways, sidewalks, and garden beds 
@@ -170,8 +175,11 @@
 
         <!-- Blowing -->
         <div class="service-card reveal">
-          <div class="service-card-body" style="padding: 2.5rem;">
-            <div class="service-card-icon" style="margin-top: 0;">🍃</div>
+          <div class="service-card-img">
+            <img src="images/blowing.jpg" alt="Professional lawn blowing cleanup service">
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon">🍃</div>
             <h3>Blowing</h3>
             <p>
               Thorough debris cleanup using commercial-grade blowers. We leave your 
@@ -430,6 +438,14 @@
               <div class="form-group">
                 <label for="message">Tell Us About Your Property *</label>
                 <textarea id="message" name="message" placeholder="Approximate yard size, any specific needs, preferred schedule..." required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="photo">Photo of Your Property (Optional)</label>
+                <div class="file-upload-wrapper">
+                  <input type="file" id="photo" name="attachment" accept="image/*">
+                  <p class="file-info">Max size: 10MB. Formats: JPG, PNG, WEBP.</p>
+                </div>
               </div>
 
               <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">
